@@ -1,0 +1,24 @@
+{
+  "name": "fs-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/fullstack-hy2020/fs-typescript#readme",
+  "bugs": {
+    "url": "https://github.com/fullstack-hy2020/fs-typescript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstack-hy2020/fs-typescript.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
