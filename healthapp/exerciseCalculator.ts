@@ -14,7 +14,7 @@ type ExerciseInput = {
 };
 
 const descriptions = {
-  1: 'needs work',
+  1: 'bad',
   2: 'not bad but could be better',
   3: 'great job'
 };
@@ -51,11 +51,14 @@ const parseArguments = (args: string[]): ExerciseInput => {
   return { target, exerciseHours };
 };
 
-
-try {
-  const { target, exerciseHours } = parseArguments(process.argv);
-  console.log(calculateExercises(exerciseHours, target));
-} catch(error: unknown) {
-  console.error(error instanceof Error ? error.message : error);
-  process.exit(1);
+if(process.argv[1] === import.meta.filename) {
+  try {
+    const { target, exerciseHours } = parseArguments(process.argv);
+    console.log(calculateExercises(exerciseHours, target));
+  } catch(error: unknown) {
+    console.error(error instanceof Error ? error.message : error);
+    process.exit(1);
+  }
 }
+
+export { calculateExercises };
