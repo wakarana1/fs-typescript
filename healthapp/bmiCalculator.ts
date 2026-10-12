@@ -15,4 +15,8 @@ function calculateBmi(height: number, weight: number): string {
   }
 }
 
-console.log(calculateBmi(180, 74))
+if (process.argv[1] === import.meta.filename) {
+  console.log(calculateBmi(180, 74))
+}
+
+export { calculateBmi }
